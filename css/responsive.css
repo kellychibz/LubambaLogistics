@@ -1,5 +1,44 @@
-/* Responsive Design */
 @media (max-width: 768px) {
+    /* Hide the Book Now button on mobile */
+    .cta-button {
+        display: none;
+    }
+
+    /* Use grid for precise mobile layout */
+    .navbar {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 15px;
+    }
+
+    /* Image logo stays on left */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Text logo centered in the middle column */
+    .logo-text {
+        text-align: center;
+        font-size: 1.1rem;
+        white-space: nowrap;
+        justify-self: center;
+    }
+
+    /* Hamburger menu on right */
+    .mobile-menu {
+        display: block;
+        justify-self: end;
+    }
+
+    /* Adjust image size for mobile */
+    .logo-image {
+        height: 50px;
+    }
+
     .nav-links {
         display: none;
         position: absolute;
@@ -10,6 +49,7 @@
         flex-direction: column;
         padding: 20px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        grid-column: 1 / -1;
     }
 
     .nav-links.active {
@@ -20,10 +60,7 @@
         margin: 10px 0;
     }
 
-    .mobile-menu {
-        display: block;
-    }
-
+    /* Rest of your mobile styles... */
     .hero h1 {
         font-size: 2.2rem;
     }
@@ -50,32 +87,5 @@
 
     .cta-section h2 {
         font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        font-size: 1.4rem;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .university-logos {
-        gap: 15px;
-    }
-
-    .university {
-        padding: 10px 15px;
-        font-size: 0.9rem;
     }
 }
